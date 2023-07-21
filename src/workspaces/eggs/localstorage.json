@@ -1,0 +1,41 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "controls_repeat_ext",
+        "id": "el.MCnFpM-lF$xT]V$#^",
+        "x": 30,
+        "y": 30,
+        "inputs": {
+          "TIMES": {
+            "block": {
+              "type": "math_number",
+              "id": "qnc//aoj?[JnCfKYM{~a",
+              "fields": {
+                "NUM": 10
+              }
+            }
+          },
+          "DO": {
+            "block": {
+              "type": "text_print",
+              "id": "40MYkl#W|+bNUM{9R`:A",
+              "inputs": {
+                "TEXT": {
+                  "block": {
+                    "type": "text",
+                    "id": "EG?t]d1xw;CnqJi`FvXv",
+                    "fields": {
+                      "TEXT": "hello world"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

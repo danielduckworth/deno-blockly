@@ -1,0 +1,15 @@
+{
+  "packages": [
+    "nodejs@18.16",
+    "deno@latest",
+    "gh@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "npm install"
+    ],
+    "scripts": {
+      "run_test": "deno task serve"
+    }
+  }
+}

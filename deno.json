@@ -1,0 +1,129 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [
+      "deno.window"
+    ],
+    "strict": true
+  },
+  "lint": {
+    "include": [
+      "src/"
+    ],
+    "exclude": [
+      "src/testdata/",
+      "data/fixtures/**/*.ts"
+    ],
+    "rules": {
+      "tags": [
+        "recommended"
+      ],
+      "include": [
+        "ban-untagged-todo"
+      ],
+      "exclude": [
+        "no-unused-vars"
+      ]
+    }
+  },
+  "fmt": {
+    "useTabs": true,
+    "lineWidth": 80,
+    "indentWidth": 4,
+    "semiColons": false,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": [
+      "src/"
+    ],
+    "exclude": [
+      "src/testdata/",
+      "data/fixtures/**/*.ts"
+    ]
+  },
+  "lock": false,
+  "nodeModulesDir": true,
+  "test": {
+    "include": [
+      "src/"
+    ],
+    "exclude": [
+      "src/testdata/",
+      "data/fixtures/**/*.ts"
+    ]
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/",
+    "esm:add": "deno run -A https://esm.sh/v128 add",
+    "esm:update": "deno run -A https://esm.sh/v128 update",
+    "esm:remove": "deno run -A https://esm.sh/v128 remove",
+    "dev": "deno run -A --node-modules-dir npm:vite",
+    "build": "deno run -A --node-modules-dir npm:vite build",
+    "preview": "deno run -A --node-modules-dir npm:vite preview",
+    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
+  },
+  "imports": {
+    "/": "./",
+    "./": "./",
+    "std/": "https://deno.land/std@0.195.0/",
+    "oak": "https://deno.land/x/oak@v12.4.0/mod.ts",
+    "@mdi/js": "https://esm.sh/v128/@mdi/js@7.2.96",
+    "@vitejs/plugin-vue": "https://esm.sh/v128/*@vitejs/plugin-vue@4.2.3",
+    "blockly": "https://esm.sh/v128/*blockly@10.0.2",
+    "confetti": "https://esm.sh/v128/*confetti@2.0.0",
+    "crypto": "https://esm.sh/v128/crypto@1.0.1",
+    "lodash": "https://esm.sh/v128/lodash@4.17.21",
+    "postcss": "https://esm.sh/v128/*postcss@8.4.26",
+    "postcss/": "https://esm.sh/v128/*postcss@8.4.26/",
+    "sass": "https://esm.sh/v128/*sass@1.64.0",
+    "simple-syntax-highlighter": "https://esm.sh/v128/*simple-syntax-highlighter@3.0.2",
+    "simple-syntax-highlighter/": "https://esm.sh/v128/*simple-syntax-highlighter@3.0.2/",
+    "vite-plugin-static-copy": "https://esm.sh/v128/*vite-plugin-static-copy@0.17.0",
+    "vite-plugin-vuetify": "https://esm.sh/v128/*vite-plugin-vuetify@1.0.2",
+    "vite": "https://esm.sh/v128/*vite@4.4.6",
+    "vite/": "https://esm.sh/v128/*vite@4.4.6/",
+    "vue-tsc": "https://esm.sh/v128/*vue-tsc@1.8.5",
+    "vue3-perfect-scrollbar": "https://esm.sh/v128/*vue3-perfect-scrollbar@1.6.1",
+    "vue": "https://esm.sh/v128/vue@3.3.4",
+    "vue/": "https://esm.sh/v128/vue@3.3.4/",
+    "vuetify": "https://esm.sh/v128/*vuetify@3.3.9",
+    "vuetify/": "https://esm.sh/v128/*vuetify@3.3.9/",
+    "vuetify/settings": "https://esm.sh/v128/*vuetify@3.3.9/settings",
+    "webfontloader": "https://esm.sh/v128/webfontloader@1.6.28"
+  },
+  "scopes": {
+    "https://esm.sh/v128/": {
+      "@vue/compiler-dom": "https://esm.sh/v128/@vue/compiler-dom@3.3.4",
+      "@vue/compiler-sfc": "https://esm.sh/v128/@vue/compiler-sfc@3.3.4",
+      "@vue/language-core": "https://esm.sh/v128/@vue/language-core@1.8.5",
+      "@vue/runtime-dom": "https://esm.sh/v128/@vue/runtime-dom@3.3.4",
+      "@vue/server-renderer": "https://esm.sh/v128/@vue/server-renderer@3.3.4",
+      "@vue/shared": "https://esm.sh/v128/@vue/shared@3.3.4",
+      "@vue/typescript": "https://esm.sh/v128/@vue/typescript@1.8.5",
+      "@vuetify/loader-shared": "https://esm.sh/v128/@vuetify/loader-shared@1.7.1",
+      "chokidar": "https://esm.sh/v128/chokidar@3.5.3",
+      "cssnano": "https://esm.sh/v128/cssnano@5.1.15",
+      "debug": "https://esm.sh/v128/debug@4.3.4",
+      "dotenv": "https://esm.sh/v128/dotenv@10.0.0",
+      "esbuild": "https://esm.sh/v128/esbuild@0.18.15",
+      "fast-glob": "https://esm.sh/v128/fast-glob@3.3.0",
+      "fs-extra": "https://esm.sh/v128/fs-extra@11.1.1",
+      "immutable": "https://esm.sh/v128/immutable@4.3.1",
+      "jsdom": "https://esm.sh/v128/jsdom@22.1.0",
+      "nanoid": "https://esm.sh/v128/nanoid@3.3.6",
+      "util": "https://esm.sh/v128/*util@0.12.5",
+      "tty": "https://esm.sh/v128/tty@1.0.1",
+      "path": "https://esm.sh/v128/*path@0.12.7",
+      "node-fetch": "https://esm.sh/v128/node-fetch@2.6.12",
+      "perfect-scrollbar": "https://esm.sh/v128/perfect-scrollbar@1.5.5",
+      "picocolors": "https://esm.sh/v128/picocolors@1.0.0",
+      "postcss-import": "https://esm.sh/v128/postcss-import@12.0.1",
+      "qs": "https://esm.sh/v128/qs@6.11.2",
+      "rollup": "https://esm.sh/v128/rollup@3.26.3",
+      "semver": "https://esm.sh/v128/semver@7.5.4",
+      "source-map-js": "https://esm.sh/v128/source-map-js@1.0.2",
+      "upath": "https://esm.sh/v128/upath@2.0.1",
+      "yayson": "https://esm.sh/v128/yayson@3.0.0"
+    }
+  }
+}
